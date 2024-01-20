@@ -122,7 +122,7 @@ contract ECommerce {
 
         function setUserLocation(int256 _latitude,int256 _longitiude) public  {
             user.location[msg.sender]=location(msg.sender,_latitude,_longitiude)
-        }
+        }  
     }
    
     }
