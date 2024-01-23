@@ -2,7 +2,8 @@
 pragma solidity ^0.8.0;
 
 contract PaymentHandler {
-    event PaymentReceived(address indexed from, uint256 amount);
+ address public payable owner;    
+event PaymentReceived(address indexed _from, uint256 amount);
 
     function receivePayment() external payable {
         require(msg.value > 0, "Payment must be greater than 0");
