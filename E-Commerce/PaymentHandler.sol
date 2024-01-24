@@ -8,7 +8,7 @@ event PaymentReceived(address indexed _from, uint256 amount);
     function receivePayment() external payable {
         require(msg.value > 0, "Payment must be greater than 0");
         
-        // Additional logic, if needed
+        
 
         emit PaymentReceived(msg.sender, msg.value);
     }
@@ -17,7 +17,7 @@ event PaymentReceived(address indexed _from, uint256 amount);
         uint256 amountToWithdraw = 1 ether; // Specify the amount to withdraw
         require(address(this).balance >= amountToWithdraw, "Insufficient balance");
        
-        (bool success, ) = msg.sender.call{value: amountToWithdraw}("");
+        (bool success,) = msg.sender.call{value: amountToWithdraw}("");
         require(success, "Withdrawal failed");
     }
 }
