@@ -85,7 +85,8 @@ contract ECommerce {
     function makePayment() external onlyPayer notPaid payable {
         require(msg.value == commerce[msg.sender].amount, "Incorrect payment amount");
         commerce[msg.sender].payee.transfer(msg.value);
-        // mark the payment as complete
+            }
+        function createPayment() extenal {
         commerce[msg.sender].paid = true;
         emit PaymentReceived(msg.sender, msg.value);
     }
