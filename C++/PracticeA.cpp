@@ -60,4 +60,4 @@ int main()
     printf(% d, cel);
     scanf(cel = % d "Cel");
 }
- // USING A POINTER IN C++
+ 
