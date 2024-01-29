@@ -8,9 +8,7 @@ event PaymentReceived(address indexed _from, uint256 amount);
     function receivePayment() external payable {
         require(msg.value > 0, "Payment must be greater than 0");
         
-        
-
-        emit PaymentReceived(msg.sender, msg.value);
+emit PaymentReceived(msg.sender, msg.value);
     }
 
     function withdraw() external {
