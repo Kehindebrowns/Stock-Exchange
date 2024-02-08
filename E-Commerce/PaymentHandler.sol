@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 contract PaymentHandler {
- address public payable owner;    
+ address public payable owner;   
 event PaymentReceived(address indexed _from, uint256 amount);
 
     function receivePayment() external payable {
