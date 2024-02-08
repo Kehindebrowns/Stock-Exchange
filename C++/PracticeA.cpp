@@ -32,13 +32,12 @@ int main()
     }
 }
 
-#include <cstdio>
-using namespace std;
+
 
 int main()
 {
     int age;
-    // cout << "Enter the age"<<endl;
+     cout << "Enter the age"<<endl;
     printf(Age = % s, "age");
     scanf(% s, &age);
 
