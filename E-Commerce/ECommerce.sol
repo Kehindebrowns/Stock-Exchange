@@ -20,6 +20,8 @@ contract ECommerce {
         address payer;
         address payee;
         bool paid;
+        int256 logitiude;
+        int256  latitude;
     }
 
     function addECommerce(
@@ -105,7 +107,7 @@ contract ECommerce {
     }
 
     function decrementCart(string memory _items) public {
-        commerce[msg.sender].item = _item
+        commerce[msg.sender].item = _item;
     }
 
     function addClothes() external {
@@ -122,7 +124,7 @@ contract ECommerce {
         mapping(address=> Location) public userLocation;
 
         function setUserLocation(int256 _latitude,int256 _longitiude) public  {
-            user.location[msg.sender]=location(msg.sender,_latitude,_longitiude)
+            userLocation[msg.sender] = Location (_latitude,_longitiude)
         }  
     }
    
