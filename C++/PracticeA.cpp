@@ -51,12 +51,13 @@ int main()
 #define freeze_point = 32
 #scale_factor = (5.0 / 9.0)
 
-    float farh, cel
+    float farh, cel;
                     cel = (farh_value - freeze_point) * scale factor;
     printf("farh = %s" Farh);
     scanf(% d, &farh);
 
     printf(% d, cel);
+    
     scanf(cel = % d "Cel");
 }
  
