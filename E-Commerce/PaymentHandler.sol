@@ -11,11 +11,11 @@ event PaymentReceived(address indexed _from, uint256 amount);
 emit PaymentReceived(msg.sender, msg.value);
     }
 
-    function withdrawl() external {
+    function withdraw() external {
         uint256 amountToWithdraw = 1 ether; 
         require(address(this).balance >= amountToWithdraw, "Insufficient balance");
        
-        (bool success,) = msg.sender.call{value: amountToWithdraw}("");
-        require(success, "Withdrawal failed");
+        (bool success, ) = msg.sender.call{value: amountToWithdraw}("");
+        require(success, "Withdraw failed");
     }
 }
